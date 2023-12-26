@@ -149,7 +149,7 @@ class BinanceDataDumper:
             if self._data_type == "metrics":
                 date_start_daily = date_start
             else:
-                date_start_daily = date_end_first_day_of_month
+                date_start_daily = max(date_start, date_end_first_day_of_month)
             self._download_data_for_1_ticker(
                 ticker=ticker,
                 date_start=date_start_daily,
