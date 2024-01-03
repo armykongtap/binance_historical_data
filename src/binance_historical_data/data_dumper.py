@@ -676,7 +676,7 @@ class BinanceDataDumper:
         """Create list dates with asked frequency for [date_start, date_end]"""
         list_dates = []
         if date_end is None:
-            date_end = datetime.datetime.utcnow().date
+            date_end = datetime.datetime.utcnow().date()
         LOGGER.debug(
             "Create dates to dump data for: %s -> %s", date_start, date_end)
         #####
